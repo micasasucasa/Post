@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A1198D7220A2433002F7BA1 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1198D6220A2433002F7BA1 /* PostListViewController.swift */; };
 		4A4511F72208EE860069E563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4511F62208EE860069E563 /* AppDelegate.swift */; };
-		4A4511F92208EE860069E563 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4511F82208EE860069E563 /* ViewController.swift */; };
 		4A4511FC2208EE860069E563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4511FA2208EE860069E563 /* Main.storyboard */; };
 		4A4511FE2208EE870069E563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4511FD2208EE870069E563 /* Assets.xcassets */; };
 		4A4512012208EE870069E563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4511FF2208EE870069E563 /* LaunchScreen.storyboard */; };
+		4A45120A2208EF800069E563 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4512092208EF800069E563 /* Post.swift */; };
+		4A45120D2208F1F60069E563 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A45120C2208F1F60069E563 /* PostController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A1198D6220A2433002F7BA1 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		4A4511F32208EE860069E563 /* POST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POST.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4511F62208EE860069E563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A4511F82208EE860069E563 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4A4511FB2208EE860069E563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A4511FD2208EE870069E563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A4512002208EE870069E563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A4512022208EE870069E563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A4512092208EF800069E563 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		4A45120C2208F1F60069E563 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +59,31 @@
 			isa = PBXGroup;
 			children = (
 				4A4511F62208EE860069E563 /* AppDelegate.swift */,
-				4A4511F82208EE860069E563 /* ViewController.swift */,
 				4A4511FA2208EE860069E563 /* Main.storyboard */,
+				4A1198D6220A2433002F7BA1 /* PostListViewController.swift */,
+				4A45120B2208EF860069E563 /* Model */,
+				4A4512082208EEF10069E563 /* Resources */,
+			);
+			path = POST;
+			sourceTree = "<group>";
+		};
+		4A4512082208EEF10069E563 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				4A4511FD2208EE870069E563 /* Assets.xcassets */,
 				4A4511FF2208EE870069E563 /* LaunchScreen.storyboard */,
 				4A4512022208EE870069E563 /* Info.plist */,
 			);
-			path = POST;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4A45120B2208EF860069E563 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A4512092208EF800069E563 /* Post.swift */,
+				4A45120C2208F1F60069E563 /* PostController.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A4511F92208EE860069E563 /* ViewController.swift in Sources */,
+				4A45120A2208EF800069E563 /* Post.swift in Sources */,
+				4A1198D7220A2433002F7BA1 /* PostListViewController.swift in Sources */,
+				4A45120D2208F1F60069E563 /* PostController.swift in Sources */,
 				4A4511F72208EE860069E563 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +307,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = POST/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/POST/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +325,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = POST/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/POST/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
